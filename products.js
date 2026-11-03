@@ -47,11 +47,11 @@ const products = [
     },
     {
         id: 4,
-        name: "OMNIA ODIN O24HDIF",
+        name: "Omnia O24HDIF",
         category: "Monitors",
-        description: "Full HD Display - 75Hz",
+        description: "Computer Monitor",
         price: 6000,
-        image: "https://www.facebook.com/photo.php?fbid=1562217639267257&set=pb.100064371084981.-2207520000&type=3",
+        image: "./images/omnia-monitor.jpg",
         featured: true
-    }
+    },
 ];
