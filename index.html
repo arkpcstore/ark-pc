@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,7 @@
 
 <style>
 
-/* =========================
-   GLOBAL SETTINGS
-========================= */
+/* GLOBAL */
 
 :root {
     --gold: #ffcc00;
@@ -49,9 +48,7 @@ button {
     font-family: inherit;
 }
 
-/* =========================
-   NAVIGATION BAR
-========================= */
+/* NAVIGATION */
 
 header {
     position: sticky;
@@ -77,8 +74,6 @@ header {
     height: 75px;
     object-fit: contain;
     display: block;
-    flex-shrink: 0;
-    background: transparent;
 }
 
 .nav-links {
@@ -105,24 +100,20 @@ header {
     border: none;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO */
 
 .hero {
     min-height: 520px;
-    padding: 0;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 85% 50%, rgba(0, 255, 120, 0.10), transparent 42%),
+        radial-gradient(ellipse at 85% 50%, rgba(0,255,120,0.10), transparent 42%),
         linear-gradient(110deg, #050505 40%, #17120a 100%);
     border-bottom: 1px solid #292929;
 }
 
-/* HERO GAMING PC IMAGE */
 .hero-image {
     position: absolute;
     right: 5%;
@@ -133,7 +124,7 @@ header {
     object-fit: contain;
     object-position: center bottom;
     z-index: 1;
-    filter: drop-shadow(0 0 28px rgba(0, 255, 120, 0.16));
+    filter: drop-shadow(0 0 28px rgba(0,255,120,0.16));
     pointer-events: none;
 }
 
@@ -148,11 +139,10 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5vw, 65px);
+    font-size: clamp(38px,5vw,65px);
     line-height: 1.15;
     font-weight: 900;
     margin-bottom: 20px;
-    max-width: 750px;
 }
 
 .hero h1 span {
@@ -169,7 +159,7 @@ header {
 .gold-btn {
     display: inline-block;
     padding: 14px 28px;
-    background: linear-gradient(135deg, #ffe680, #c99700);
+    background: linear-gradient(135deg,#ffe680,#c99700);
     color: #080808;
     font-size: 14px;
     font-weight: 900;
@@ -183,12 +173,15 @@ header {
     box-shadow: 0 5px 25px rgba(255,204,0,0.35);
 }
 
-/* =========================
-   GENERAL SECTION
-========================= */
+/* GENERAL SECTIONS */
 
 section {
     padding: 70px 35px;
+}
+
+.container {
+    max-width: 1450px;
+    margin: auto;
 }
 
 .section-heading {
@@ -209,14 +202,7 @@ section {
     margin-top: 5px;
 }
 
-.container {
-    max-width: 1450px;
-    margin: auto;
-}
-
-/* =========================
-   CATEGORIES
-========================= */
+/* CATEGORIES */
 
 .categories {
     background: #080808;
@@ -224,7 +210,7 @@ section {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
     gap: 15px;
 }
 
@@ -240,15 +226,14 @@ section {
     color: white;
 }
 
-.category-card:hover {
-    background: linear-gradient(135deg, #ffda45, #b88600);
+.category-card:hover,
+.category-card.active {
+    background: linear-gradient(135deg,#ffda45,#b88600);
     color: #080808;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products {
     background: #111111;
@@ -278,7 +263,7 @@ section {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 22px;
 }
 
@@ -301,11 +286,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:
-        radial-gradient(circle, #37302a, #151515 70%);
+    background: radial-gradient(circle,#37302a,#151515 70%);
     color: var(--gold);
     font-size: 17px;
     font-weight: bold;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
 }
 
 .product-info {
@@ -334,7 +326,7 @@ section {
     display: block;
     text-align: center;
     padding: 11px;
-    background: linear-gradient(135deg, #ffe680, #c99700);
+    background: linear-gradient(135deg,#ffe680,#c99700);
     color: #000;
     font-weight: bold;
     border-radius: 5px;
@@ -352,9 +344,7 @@ section {
     padding: 30px;
 }
 
-/* =========================
-   WHY CHOOSE US
-========================= */
+/* WHY CHOOSE US */
 
 .why-us {
     background: #080808;
@@ -362,7 +352,7 @@ section {
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
@@ -389,9 +379,7 @@ section {
     font-size: 14px;
 }
 
-/* =========================
-   BRANCHES
-========================= */
+/* BRANCHES */
 
 .branches {
     background: #111;
@@ -399,7 +387,7 @@ section {
 
 .branch-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 22px;
 }
 
@@ -422,13 +410,11 @@ section {
     margin-bottom: 12px;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact {
     background:
-        radial-gradient(ellipse at center, rgba(255,204,0,0.12), transparent 65%),
+        radial-gradient(ellipse at center,rgba(255,204,0,0.12),transparent 65%),
         #080808;
     text-align: center;
 }
@@ -444,9 +430,7 @@ section {
     margin-bottom: 25px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     background: #050505;
@@ -473,18 +457,16 @@ footer .tagline {
     margin: 8px 0;
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
-@media(max-width: 950px) {
+@media(max-width:950px) {
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .category-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 
     .hero-content {
@@ -495,10 +477,9 @@ footer .tagline {
         width: 43%;
         right: 2%;
     }
-
 }
 
-@media(max-width: 650px) {
+@media(max-width:650px) {
 
     .navbar {
         padding: 10px 18px;
@@ -506,6 +487,7 @@ footer .tagline {
 
     .logo {
         height: 60px;
+        width: 60px;
     }
 
     .menu-toggle {
@@ -564,7 +546,7 @@ footer .tagline {
     }
 
     .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 10px;
     }
 
@@ -574,7 +556,7 @@ footer .tagline {
     }
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,minmax(0,1fr));
         gap: 12px;
     }
 
@@ -599,7 +581,6 @@ footer .tagline {
     .branch-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 </style>
@@ -612,13 +593,15 @@ footer .tagline {
 <header>
     <nav class="navbar">
 
-<a href="#home">
-    <img src="./ark-pc-logo.png"
-         alt="ARK PC Official Logo"
-         class="logo">
-</a>
+        <a href="#home">
+            <img src="./ark-pc-logo.png"
+                 alt="ARK PC Official Logo"
+                 class="logo">
+        </a>
 
-        <button class="menu-toggle" onclick="toggleMenu()">
+        <button class="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Toggle navigation">
             ☰
         </button>
 
@@ -633,8 +616,7 @@ footer .tagline {
     </nav>
 </header>
 
-
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -657,14 +639,11 @@ footer .tagline {
 
     </div>
 
-    <img
-        src="./hero-gaming-pc.png"
-        alt="Gaming PC build with green RGB lighting"
-        class="hero-image"
-    >
+    <img src="./hero-gaming-pc.png"
+         alt="Gaming PC build with green RGB lighting"
+         class="hero-image">
 
 </section>
-
 
 <!-- CATEGORIES -->
 
@@ -678,25 +657,16 @@ footer .tagline {
         </div>
 
         <div class="category-grid">
-           
+
             <a href="#products" class="category-card" data-category="Processors">Processors</a>
-
             <a href="#products" class="category-card" data-category="Motherboards">Motherboards</a>
-
             <a href="#products" class="category-card" data-category="Graphics Cards">Graphics Cards</a>
-
             <a href="#products" class="category-card" data-category="RAM">RAM</a>
-
             <a href="#products" class="category-card" data-category="SSD & HDD">SSD & HDD</a>
-
             <a href="#products" class="category-card" data-category="Power Supplies">Power Supplies</a>
-
             <a href="#products" class="category-card" data-category="PC Cases">PC Cases</a>
-
             <a href="#products" class="category-card" data-category="Monitors">Monitors</a>
-
             <a href="#products" class="category-card" data-category="Peripherals">Peripherals</a>
-
             <a href="#products" class="category-card" data-category="Pisonet Parts">Pisonet Parts</a>
 
         </div>
@@ -705,8 +675,7 @@ footer .tagline {
 
 </section>
 
-
-<!-- FEATURED PRODUCTS -->
+<!-- PRODUCTS -->
 
 <section class="products" id="products">
 
@@ -718,98 +687,14 @@ footer .tagline {
         </div>
 
         <div class="product-search">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search products..."
-                oninput="searchProducts()">
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search products..."
+                   oninput="searchProducts()">
         </div>
 
         <div class="product-grid" id="productGrid">
-
-            <!-- PRODUCT 1 -->
-
-            <div class="product-card" data-category="Processors">
-
-                <div class="product-image">
-                    PROCESSOR
-                </div>
-
-                <div class="product-info">
-                    <h3>AMD Ryzen 3 3200G</h3>
-                    <p>AMD Desktop Processor - Tray Type</p>
-                    <div class="product-price">₱4,300</div>
-
-                    <a href="#contact" class="inquire-btn">
-                        INQUIRE NOW
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCT 2 -->
-
-            <div class="product-card" data-category="SSD & HDD">
-
-                <div class="product-image">
-                    SSD STORAGE
-                </div>
-
-                <div class="product-info">
-                    <h3>TeamGroup GX2 512GB</h3>
-                    <p>2.5-inch SATA III SSD</p>
-                    <div class="product-price">Contact for Price</div>
-
-                    <a href="#contact" class="inquire-btn">
-                        INQUIRE NOW
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCT 3 -->
-
-            <div class="product-card" data-category="Peripherals">
-
-                <div class="product-image">
-                    GAMING KEYBOARD
-                </div>
-
-                <div class="product-info">
-                    <h3>Redragon Mitra</h3>
-                    <p>104-Key Mechanical Gaming Keyboard</p>
-                    <div class="product-price">₱2,000</div>
-
-                    <a href="#contact" class="inquire-btn">
-                        INQUIRE NOW
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCT 4 -->
-
-            <div class="product-card" data-category="Monitors">
-
-                <div class="product-image">
-                    MONITOR
-                </div>
-
-                <div class="product-info">
-                    <h3>22-inch FHD Monitor</h3>
-                    <p>Full HD Display - 75Hz</p>
-                    <div class="product-price">₱2,700</div>
-
-                    <a href="#contact" class="inquire-btn">
-                        INQUIRE NOW
-                    </a>
-                </div>
-
-            </div>
-
+            <!-- Products load automatically from products.js -->
         </div>
 
         <div class="no-products" id="noProducts">
@@ -819,7 +704,6 @@ footer .tagline {
     </div>
 
 </section>
-
 
 <!-- WHY CHOOSE US -->
 
@@ -858,7 +742,6 @@ footer .tagline {
 
 </section>
 
-
 <!-- BRANCHES -->
 
 <section class="branches" id="branches">
@@ -878,9 +761,7 @@ footer .tagline {
                     14 Litex Road, Commonwealth,
                     Quezon City
                 </p>
-                <p>
-                    Beside LBC Litex & Andok's
-                </p>
+                <p>Beside LBC Litex & Andok's</p>
             </div>
 
             <div class="branch-card">
@@ -890,16 +771,12 @@ footer .tagline {
                     West Bajac Bajac,
                     Olongapo City
                 </p>
-                <p>
-                    Near Victory Liner & Ulo ng Apo
-                </p>
+                <p>Near Victory Liner & Ulo ng Apo</p>
             </div>
 
             <div class="branch-card">
                 <h3>ARKIA Caloocan</h3>
-                <p>
-                    Visit our ARKIA Caloocan branch.
-                </p>
+                <p>Visit our ARKIA Caloocan branch.</p>
             </div>
 
         </div>
@@ -907,7 +784,6 @@ footer .tagline {
     </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -934,22 +810,15 @@ footer .tagline {
 
 </section>
 
-
 <!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-logo">
-        ARK PC
-    </div>
+    <div class="footer-logo">ARK PC</div>
 
-    <p class="tagline">
-        WE BUILD IT RIGHT.
-    </p>
+    <p class="tagline">WE BUILD IT RIGHT.</p>
 
-    <p>
-        ARK PC & Pisonet Parts
-    </p>
+    <p>ARK PC & Pisonet Parts</p>
 
     <p>
         © <span id="year"></span> ARK PC. All Rights Reserved.
@@ -957,61 +826,167 @@ footer .tagline {
 
 </footer>
 
+<!-- PRODUCT DATABASE -->
+<script src="./products.js"></script>
 
-<!-- JAVASCRIPT -->
+<!-- WEBSITE JAVASCRIPT -->
 
 <script>
 
-function toggleMenu() {
+// MOBILE MENU
 
+function toggleMenu() {
     document.getElementById("navLinks")
         .classList.toggle("active");
-
 }
 
 function closeMenu() {
-
     document.getElementById("navLinks")
         .classList.remove("active");
+}
+
+
+// PRODUCT DATABASE
+
+const productData = typeof products !== "undefined"
+    ? products
+    : [];
+
+const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+const noProducts = document.getElementById("noProducts");
+
+let selectedCategory = "All";
+
+
+// FORMAT PRICE
+
+function formatPrice(price) {
+
+    if (!price || Number(price) <= 0) {
+        return "Contact for Price";
+    }
+
+    return "₱" + Number(price).toLocaleString("en-PH");
 
 }
 
 
-// PRODUCT SEARCH
+// DISPLAY PRODUCTS
 
-function searchProducts() {
+function displayProducts() {
 
-    const input = document
-        .getElementById("searchInput")
-        .value.toLowerCase();
+    productGrid.innerHTML = "";
 
-    const products = document
-        .querySelectorAll(".product-card");
+    productData.forEach(product => {
+
+        const card = document.createElement("div");
+
+        card.className = "product-card";
+        card.dataset.category = product.category || "";
+
+        const imageBox = document.createElement("div");
+        imageBox.className = "product-image";
+
+        if (product.image) {
+
+            const img = document.createElement("img");
+
+            img.src = product.image;
+            img.alt = product.name || "ARK PC Product";
+            img.loading = "lazy";
+
+            img.onerror = function() {
+                this.remove();
+                imageBox.textContent = product.category || "ARK PC PRODUCT";
+            };
+
+            imageBox.appendChild(img);
+
+        } else {
+
+            imageBox.textContent = product.category || "ARK PC PRODUCT";
+
+        }
+
+        const info = document.createElement("div");
+        info.className = "product-info";
+
+        const name = document.createElement("h3");
+        name.textContent = product.name || "Unnamed Product";
+
+        const description = document.createElement("p");
+        description.textContent = product.description || "";
+
+        const price = document.createElement("div");
+        price.className = "product-price";
+        price.textContent = formatPrice(product.price);
+
+        const inquire = document.createElement("a");
+        inquire.href = "#contact";
+        inquire.className = "inquire-btn";
+        inquire.textContent = "INQUIRE NOW";
+
+        info.appendChild(name);
+        info.appendChild(description);
+        info.appendChild(price);
+        info.appendChild(inquire);
+
+        card.appendChild(imageBox);
+        card.appendChild(info);
+
+        productGrid.appendChild(card);
+
+    });
+
+    applyFilters();
+
+}
+
+
+// SEARCH AND CATEGORY FILTER
+
+function applyFilters() {
+
+    const searchTerm = searchInput.value
+        .toLowerCase()
+        .trim();
+
+    const cards = productGrid.querySelectorAll(".product-card");
 
     let visibleCount = 0;
 
-    products.forEach(product => {
+    cards.forEach(card => {
 
-        const productName = product
-            .innerText.toLowerCase();
+        const matchesSearch =
+            card.innerText.toLowerCase().includes(searchTerm);
 
-        const matches = productName.includes(input);
+        const matchesCategory =
+            selectedCategory === "All" ||
+            card.dataset.category === selectedCategory;
 
-        product.style.display = matches ? "block" : "none";
+        const visible = matchesSearch && matchesCategory;
 
-        if (matches) {
+        card.style.display = visible ? "" : "none";
+
+        if (visible) {
             visibleCount++;
         }
 
     });
 
-    document.getElementById("noProducts")
-        .style.display = visibleCount === 0 ? "block" : "none";
+    noProducts.style.display =
+        visibleCount === 0 ? "block" : "none";
 
 }
 
 
-// CATEGORY FILTER
+// SEARCH
+
+function searchProducts() {
+    applyFilters();
+}
+
 
 // CATEGORY FILTER
 
@@ -1020,43 +995,31 @@ document.querySelectorAll(".category-card")
 
         category.addEventListener("click", function() {
 
-            const selected = this.dataset.category;
+            selectedCategory = this.dataset.category;
 
-            const products = document
-                .querySelectorAll(".product-card");
+            searchInput.value = "";
 
-            document.getElementById("searchInput").value = "";
+            document.querySelectorAll(".category-card")
+                .forEach(item => item.classList.remove("active"));
 
-            let visibleCount = 0;
+            this.classList.add("active");
 
-            products.forEach(product => {
-
-                const matches =
-                    selected === "All" ||
-                    product.dataset.category === selected;
-
-                product.style.display =
-                    matches ? "block" : "none";
-
-                if (matches) {
-                    visibleCount++;
-                }
-
-            });
-
-            document.getElementById("noProducts")
-                .style.display =
-                visibleCount === 0 ? "block" : "none";
+            applyFilters();
 
         });
 
     });
 
 
-// AUTOMATIC COPYRIGHT YEAR
+// COPYRIGHT YEAR
 
 document.getElementById("year").textContent =
     new Date().getFullYear();
+
+
+// LOAD PRODUCTS
+
+displayProducts();
 
 </script>
 
