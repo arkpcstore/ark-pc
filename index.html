@@ -111,28 +111,30 @@ header {
 
 .hero {
     min-height: 520px;
+    padding: 0;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 85% 50%, rgba(255,190,0,0.18), transparent 45%),
+        radial-gradient(ellipse at 85% 50%, rgba(0, 255, 120, 0.10), transparent 42%),
         linear-gradient(110deg, #050505 40%, #17120a 100%);
     border-bottom: 1px solid #292929;
 }
 
-.hero::before {
-    content: "";
+/* HERO GAMING PC IMAGE */
+.hero-image {
     position: absolute;
-    width: 450px;
-    height: 450px;
-    right: 10%;
-    top: 40px;
-    border: 2px solid rgba(255,204,0,0.15);
-    border-radius: 50%;
-    box-shadow:
-        0 0 50px rgba(255,204,0,0.08),
-        inset 0 0 50px rgba(255,204,0,0.08);
+    right: 5%;
+    bottom: 0;
+    width: 43%;
+    height: 96%;
+    max-width: 590px;
+    object-fit: contain;
+    object-position: center bottom;
+    z-index: 1;
+    filter: drop-shadow(0 0 28px rgba(0, 255, 120, 0.16));
+    pointer-events: none;
 }
 
 .hero-content {
@@ -140,6 +142,7 @@ header {
     width: 100%;
     margin: auto;
     padding: 70px 45px;
+    padding-right: 48%;
     position: relative;
     z-index: 2;
 }
@@ -484,6 +487,15 @@ footer .tagline {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .hero-content {
+        padding-right: 43%;
+    }
+
+    .hero-image {
+        width: 43%;
+        right: 2%;
+    }
+
 }
 
 @media(max-width: 650px) {
@@ -518,15 +530,29 @@ footer .tagline {
     }
 
     .hero {
-        min-height: 420px;
+        min-height: 760px;
+        align-items: flex-start;
     }
 
     .hero-content {
-        padding: 65px 25px;
+        padding: 55px 25px 350px;
     }
 
     .hero h1 {
         font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 78%;
+        height: 340px;
+        max-width: 360px;
+        right: 50%;
+        bottom: 0;
+        transform: translateX(50%);
     }
 
     section {
@@ -630,6 +656,12 @@ footer .tagline {
         </a>
 
     </div>
+
+    <img
+        src="./hero-gaming-pc.png"
+        alt="Gaming PC build with green RGB lighting"
+        class="hero-image"
+    >
 
 </section>
 
@@ -1002,23 +1034,6 @@ document.querySelectorAll(".category-card")
                 const matches =
                     selected === "All" ||
                     product.dataset.category === selected;
-
-                product.style.display =
-                    matches ? "block" : "none";
-
-                if (matches) {
-                    visibleCount++;
-                }
-
-            });
-
-            document.getElementById("noProducts")
-                .style.display =
-                visibleCount === 0 ? "block" : "none";
-
-        });
-
-    });
 
                 product.style.display =
                     matches ? "block" : "none";
