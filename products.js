@@ -51,7 +51,7 @@ const products = [
         category: "Monitors",
         description: "Full HD Display - 75Hz",
         price: 6000,
-        image: "",
+        image: "https://www.facebook.com/photo.php?fbid=1562217639267257&set=pb.100064371084981.-2207520000&type=3",
         featured: true
     }
 ];
