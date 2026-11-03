@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARK PC | We Build IT Right</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+header {
+    background: #111;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #d6a900;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #f5c400;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #f5c400;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+    radial-gradient(circle at 80% 50%, #493600 0%, transparent 40%),
+    linear-gradient(120deg, #050505, #191919);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f5c400;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffe36b, #c49300);
+    color: black;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    filter: brightness(1.15);
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #f5c400;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #aaa;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.category {
+    background: #171717;
+    border: 1px solid #51420e;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.category:hover {
+    border-color: #f5c400;
+    transform: translateY(-5px);
+}
+
+.products {
+    background: #101010;
+}
+
+.search {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    margin: 0 auto 30px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #222;
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: #1b1b1b;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.product-card:hover {
+    border-color: #e5b900;
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 150px;
+    background: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #f5c400;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 11px;
+    background: #d6a900;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.branches {
+    text-align: center;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.branch {
+    background: #181818;
+    border: 1px solid #51420e;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.branch h3 {
+    color: #f5c400;
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #050505;
+    border-top: 2px solid #d6a900;
+    padding: 35px 8%;
+    text-align: center;
+    color: #aaa;
+}
+
+footer h2 {
+    color: #f5c400;
+    margin-bottom: 12px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ARK <span>PC</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#branches">Branches</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>WE BUILD <span>IT RIGHT.</span></h1>
+
+        <p>
+        Your trusted partner in computer parts,
+        PC building, and Pisonet solutions.
+        Discover quality products and great deals
+        at ARK PC & Pisonet Parts.
+        </p>
+
+        <a href="#products" class="button">
+            EXPLORE PRODUCTS
+        </a>
+    </div>
+</div>
+
+<section id="categories">
+    <div class="section-title">
+        <h2>SHOP BY CATEGORY</h2>
+        <p>Find the right components for your setup.</p>
+    </div>
+
+    <div class="categories">
+        <div class="category">Processors</div>
+        <div class="category">Motherboards</div>
+        <div class="category">Graphics Cards</div>
+        <div class="category">RAM</div>
+        <div class="category">SSD & HDD</div>
+        <div class="category">Power Supplies</div>
+        <div class="category">PC Cases</div>
+        <div class="category">Monitors</div>
+        <div class="category">Peripherals</div>
+        <div class="category">Pisonet Parts</div>
+    </div>
+</section>
+
+<section class="products" id="products">
+
+    <div class="section-title">
+        <h2>FEATURED PRODUCTS</h2>
+        <p>Explore our latest computer products.</p>
+    </div>
+
+    <input
+        type="text"
+        class="search"
+        id="search"
+        placeholder="Search products..."
+    >
+
+    <div class="product-grid" id="productGrid">
+
+        <div class="product-card">
+            <div class="product-image">💻</div>
+            <h3>AMD Ryzen Processor</h3>
+            <p>Quality processors for your PC build.</p>
+            <div class="price">₱4,300</div>
+            <button onclick="inquire('AMD Ryzen Processor')">
+                INQUIRE NOW
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">💾</div>
+            <h3>512GB SATA SSD</h3>
+            <p>Fast and reliable storage upgrade.</p>
+            <div class="price">₱0.00</div>
+            <button onclick="inquire('512GB SATA SSD')">
+                INQUIRE NOW
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">⌨️</div>
+            <h3>Mechanical Keyboard</h3>
+            <p>Gaming keyboard for your setup.</p>
+            <div class="price">₱2,000</div>
+            <button onclick="inquire('Mechanical Keyboard')">
+                INQUIRE NOW
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="branches" id="branches">
+    <div class="section-title">
+        <h2>OUR BRANCHES</h2>
+        <p>Visit us at our store locations.</p>
+    </div>
+
+    <div class="branch-grid">
+
+        <div class="branch">
+            <h3>ARK PC LITEX</h3>
+            <p>14 Litex Road, Commonwealth, QC</p>
+        </div>
+
+        <div class="branch">
+            <h3>ARK PC OLONGAPO</h3>
+            <p>20th St. Corner Caron St., West Bajac Bajac, Olongapo City</p>
+        </div>
+
+        <div class="branch">
+            <h3>ARKIA CALOOCAN</h3>
+            <p>Visit our ARKIA Caloocan branch.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contact">
+    <h2>ARK PC & PISONET PARTS</h2>
+    <p>WE BUILD IT RIGHT.</p>
+    <br>
+    <p>Quality Products. Reliable Service. Great Value.</p>
+    <br>
+    <p>© 2026 ARK PC. All Rights Reserved.</p>
+</footer>
+
+<script>
+function inquire(product) {
+    const message = encodeURIComponent(
+        "Hello ARK PC! I am interested in " + product +
+        ". Can I ask for more details?"
+    );
+
+    window.open(
+        "https://www.facebook.com/ARKPC",
+        "_blank"
+    );
+}
+
+document.getElementById("search").addEventListener("input", function() {
+    const search = this.value.toLowerCase();
+
+    document.querySelectorAll(".product-card").forEach(card => {
+        card.style.display =
+            card.innerText.toLowerCase().includes(search)
+            ? "block" : "none";
+    });
+});
+</script>
+
+</body>
+</html>
