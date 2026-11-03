@@ -6,7 +6,7 @@ const products = [
         category: "Processors",
         description: "AMD Desktop Processor - Tray Type",
         price: 4300,
-        image: "",
+        image: "image: "./images/ryzen-3-3200g.png",",
         featured: true
     },
      {
@@ -15,7 +15,7 @@ const products = [
         category: "Processors",
         description: "AMD Desktop Processor - Tray Type",
         price: 10000,
-        image: "",
+        image: "image: "./images/ryzen-5-5600gt.png",",
         featured: true
     },
      {
@@ -24,7 +24,7 @@ const products = [
         category: "Processors",
         description: "AMD Desktop Processor - Tray Type",
         price: 13800,
-        image: "",
+        image: "image: "./images/ryzen-7-5700g.png",",
         featured: true
     },
     {
