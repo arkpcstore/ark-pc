@@ -646,7 +646,8 @@ footer .tagline {
         </div>
 
         <div class="category-grid">
-
+            <a href="#products" class="category-card" data-category="All">ALL PRODUCTS</a>
+           
             <a href="#products" class="category-card" data-category="Processors">Processors</a>
 
             <a href="#products" class="category-card" data-category="Motherboards">Motherboards</a>
@@ -981,6 +982,8 @@ function searchProducts() {
 
 // CATEGORY FILTER
 
+// CATEGORY FILTER
+
 document.querySelectorAll(".category-card")
     .forEach(category => {
 
@@ -991,14 +994,32 @@ document.querySelectorAll(".category-card")
             const products = document
                 .querySelectorAll(".product-card");
 
-            let visibleCount = 0;
-
             document.getElementById("searchInput").value = "";
+
+            let visibleCount = 0;
 
             products.forEach(product => {
 
                 const matches =
+                    selected === "All" ||
                     product.dataset.category === selected;
+
+                product.style.display =
+                    matches ? "block" : "none";
+
+                if (matches) {
+                    visibleCount++;
+                }
+
+            });
+
+            document.getElementById("noProducts")
+                .style.display =
+                visibleCount === 0 ? "block" : "none";
+
+        });
+
+    });
 
                 product.style.display =
                     matches ? "block" : "none";
